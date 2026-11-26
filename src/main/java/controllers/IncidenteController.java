@@ -10,6 +10,9 @@ public class IncidenteController {
     }
 
     public int busquedaBinaria(List<Incidente> incidentes, Incidente objetivo) {
+        Objects.requireNonNull(incidentes, "incidentes");
+        Objects.requireNonNull(objetivo, "objetivo");
+        
         int low = 0;
         int high = incidentes.size()-1;
 
